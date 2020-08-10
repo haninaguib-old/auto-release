@@ -1,0 +1,13 @@
+{
+  "plugins": [
+    ["maven",{
+        "mavenCommand": "mvn",
+        "mavenReleaseGoals": ["install"]
+    }],
+    "conventional-commits"
+  ],
+  "owner": "haninaguib",
+  "repo": "auto-release",
+  "name": "Hani Naguib",
+  "email": "haninaguib@gmail.com"
+}

@@ -1,0 +1,95 @@
+<project
+    xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd"
+>
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.intuit</groupId>
+    <artifactId>auto-demo</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>auto</name>
+    <description>Auto Demo</description>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.1.16.RELEASE</version>
+        <relativePath />
+    </parent>
+
+    <scm>
+        <connection>scm:git:https://github.com/haninaguib/auto-release</connection>
+        <url>https://github.com/haninaguib/auto-release</url>
+        <tag>HEAD</tag>
+    </scm>
+
+    <repositories>
+        <repository>
+            <id>artifactory-primary-repo</id>
+            <url>http://artifact.intuit.com/artifactory/APD.PROXY.groups.public</url>
+        </repository>
+        <repository>
+            <id>artifactory-local</id>
+            <url>http://artifact.intuit.com/artifactory/maven-local-virtuals</url>
+        </repository>
+        <repository>
+            <id>artifactory-remote-optimized</id>
+            <url>http://artifact.intuit.com/artifactory/tto-platform-cg-commerce-service</url>
+        </repository>
+        <repository>
+            <id>central-mirror</id>
+            <url>http://artifact.intuit.com/content/groups/public</url>
+        </repository>
+    </repositories>
+
+    <distributionManagement>
+        <repository>
+            <!-- Don't change the ID of this repository (it's configured
+                in the SCM settings.xml that gets passed into IBP environment variables) -->
+            <id>scm.int.rel.repo</id>
+            <name>SCM INT release repository</name>
+            <!-- This value will be passed in by the SCM build -->
+            <url>http://artifact.intuit.com/nexus/content/repositories/ENG.CTG.Intuit-Releases</url>
+        </repository>
+        <snapshotRepository>
+            <!-- Don't change the ID of this repository (it's configured
+                in the settings.xml that gets passed into IBP environment variables) -->
+            <id>scm.dev.snap.repo</id>
+            <name>SCM DEV snapshot release repository</name>
+            <url>http://artifact.intuit.com/nexus/content/repositories/ENG.CTG.Intuit-Snapshots</url>
+        </snapshotRepository>
+    </distributionManagement>
+
+    <properties>
+        <java.version>1.8</java.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>versions-maven-plugin</artifactId>
+                <version>2.7</version>
+            </plugin>
+
+        </plugins>
+    </build>
+</project>
