@@ -1,3 +1,15 @@
+# v0.1.1 (Mon Aug 10 2020)
+
+#### ⚠️ Pushed to `master`
+
+- prefix test (hani_naguib@intuit.com)
+
+#### Authors: 1
+
+- Hani Naguib (hani_naguib@intuit.com)
+
+---
+
 # v0.1.0 (Mon Aug 10 2020)
 
 #### 🚀 Enhancement
