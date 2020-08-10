@@ -9,5 +9,6 @@
   "owner": "haninaguib",
   "repo": "auto-release",
   "name": "Hani Naguib",
-  "email": "haninaguib@gmail.com"
+  "email": "haninaguib@gmail.com",
+  "versionBranches": "test-"
 }
