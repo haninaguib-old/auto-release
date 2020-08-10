@@ -10,5 +10,5 @@
   "repo": "auto-release",
   "name": "Hani Naguib",
   "email": "haninaguib@gmail.com",
-  "versionBranches": "test-"
+  "tagVersionPrefix": "test-"
 }
